@@ -7,7 +7,7 @@ import { IEvent } from './shared/index'
 
 
 @Component({
-    template: `
+  template: `
     <div>
     <h1>Upcoming Angular Events</h1>
     <hr />
@@ -22,13 +22,13 @@ import { IEvent } from './shared/index'
 })
 export class EventsListComponent implements OnInit {
   events: IEvent[];
-  constructor(private eventService: EventService, private toastr: ToastrService, private route: ActivatedRoute ){
+  constructor(private eventService: EventService, private toastr: ToastrService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-      this.events = this.route.snapshot.data['events'];
-    }
-    handleThumbnailClick(eventName){
-      this.toastr.info(eventName)
-    }
+    this.events = this.route.snapshot.data['events'];
   }
+  handleThumbnailClick(eventName) {
+    this.toastr.info(eventName)
+  }
+}
