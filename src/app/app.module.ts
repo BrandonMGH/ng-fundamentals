@@ -11,7 +11,8 @@ import {
   EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events/index';
 
 import { AuthService } from './user/auth.service';
@@ -22,6 +23,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { UserModule } from './user/user.module';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { UserModule } from './user/user.module';
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
