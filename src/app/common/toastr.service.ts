@@ -2,7 +2,7 @@ import { InjectionToken } from '@angular/core';
 
 declare let toastr: any;
 
-export let TOASTR_TOKEN = new InjectionToken<Toastr>('toastr')
+export let TOASTR_TOKEN = new InjectionToken<Toastr>('toastr');
 
 export interface Toastr{
     success(msg: string, title?: string): void;
