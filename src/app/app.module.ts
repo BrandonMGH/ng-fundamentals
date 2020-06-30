@@ -12,7 +12,9 @@ import {
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
+  VoterService
 } from './events/index';
 
 import { AuthService } from './user/auth.service';
@@ -40,6 +42,7 @@ const JQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
+    UpvoteComponent,
     DurationPipe,
     ModalTriggerDirective
   ],
@@ -54,6 +57,7 @@ const JQuery = window['$'];
     EventService,
     EventRouteActivator,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
