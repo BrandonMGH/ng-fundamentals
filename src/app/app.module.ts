@@ -14,7 +14,8 @@ import {
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
-  VoterService
+  VoterService,
+  LocationValidator
 } from './events/index';
 
 import { AuthService } from './user/auth.service';
@@ -44,7 +45,8 @@ const JQuery = window['$'];
     SimpleModalComponent,
     UpvoteComponent,
     DurationPipe,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    LocationValidator
   ],
   imports: [
     BrowserModule,
