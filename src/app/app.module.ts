@@ -9,14 +9,14 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
   VoterService,
-  LocationValidator
+  LocationValidator,
+  EventResolver
 } from './events/index';
 
 import { AuthService } from './user/auth.service';
@@ -59,10 +59,10 @@ const JQuery = window['$'];
   ],
   providers: [
     EventService,
-    EventRouteActivator,
     EventListResolver,
     VoterService,
     AuthService,
+    EventResolver,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
