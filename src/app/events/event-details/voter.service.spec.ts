@@ -12,12 +12,12 @@ describe('VoterService', () => {
 
     describe('deleteVoter', () => {
         it('should remove the voter from the list of voters', () => {
-            let session = { id: 6, voters: ["joe", "john"]};
+            let session = { id: 6, voters: ['joe', 'john']};
             mockHttp.delete.and.returnValue(of(false));
-            voterService.deleteVoter(3, <ISession>session, "joe");
+            voterService.deleteVoter(6, session as ISession, 'joe');
 
             expect(session.voters.length).toBe(2);
-            expect(session.voters[0]).toBe("john");
-        })
-    })
+            expect(session.voters[0]).toBe('john');
+        });
+    });
 })
