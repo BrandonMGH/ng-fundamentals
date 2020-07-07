@@ -6,7 +6,7 @@ describe('VoterService', () => {
     let voterService: VoterService,
      mockHttp;
     beforeEach(() => {
-        mockHttp = jasmine.createSpyObj('mockHttp', ['delete', 'post']);
+        mockHttp = jasmine.createSpyObj('http', ['delete', 'post']);
         voterService = new VoterService(mockHttp);
 
     });
